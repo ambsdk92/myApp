@@ -1,0 +1,25 @@
+name: Deploy to Netlify
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy to Netlify
+        run: |
+          curl -X POST -d {} https://api.netlify.com/build_hooks/6507d20708aa4126f5900b03
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.YSrqAlYNp-cHN9GuhFqiRKC-N11VSYHUUvCfbhAP3BU }}
