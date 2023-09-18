@@ -20,6 +20,6 @@ jobs:
 
       - name: Deploy to Netlify
         run: |
-          curl -X POST -d {} https://api.netlify.com/build_hooks/65082a5e08aa41595d900cf6
+          curl -X POST -d {} https://api.netlify.com/build_hooks/65083fb0851b276c7c219405
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.Ih6Md9dnOBjQwyoDDh2iv7nECiHVySX7eaXO8iWy3tM }}
