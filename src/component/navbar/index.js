@@ -20,7 +20,9 @@ function Navigation() {
               Users
             </Nav.Link>
             <NavDropdown title="My Apps" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">ToDO App</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/todo">
+                Todo App
+              </NavDropdown.Item>
               {/* <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>

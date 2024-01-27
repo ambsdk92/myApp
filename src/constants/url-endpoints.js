@@ -4,3 +4,4 @@ const BASE_URL =
     : "http://localhost:4000";
 
 export const USERS_URL = `${BASE_URL}/api/users`;
+export const TODO_URL = `${BASE_URL}/api/todo`;
