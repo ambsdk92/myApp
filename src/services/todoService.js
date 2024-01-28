@@ -32,3 +32,20 @@ export const postTodo = (item) => {
       return { data: null, error: "Error adding todo" };
     });
 };
+
+export const patchTodo = (status, id) => {
+  const data = {
+    status,
+  };
+  return axios
+    .patch(`${TODO_URL}/${id}`, data)
+    .then((res) => {
+      const { data, status } = res;
+      if (status === 200) return { data, error: "" };
+      return { data: [], error: "" };
+    })
+    .catch((err) => {
+      console.log("Error:", err);
+      return { data: null, error: "Error updating todo" };
+    });
+};
