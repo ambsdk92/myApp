@@ -26,7 +26,6 @@ function Todo() {
   const [error, setError] = useState("");
 
   const variant = item ? "primary" : "outline-secondary";
-  const hello = "abc";
 
   // SERVICES
   const fetchTodoList = async () => {
