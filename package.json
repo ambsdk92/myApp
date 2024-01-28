@@ -42,12 +42,19 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "husky": "^9.0.6",
+    "lint-staged": "^15.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx}": [
+    "*.{js,jsx}": [
       "eslint --fix",
-      "git commit"
+      "git add"
     ]
   }
 }
